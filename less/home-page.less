@@ -1,17 +1,29 @@
 // Home Content
 
 .home {
-
   .intro {
-
     h2 {
       padding: 15px;
     }
 
     p {
-      padding:0 15px;
+      padding: 0 15px;
     }
-  
+  }
+
+  .img-top {
+    width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      height: 200px;
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 2%;
+    }
   }
 
   .space-images {
@@ -58,13 +70,23 @@
       }
 
       .btn {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        p {
+          .button();
+          &:hover {
+            .button(blue, white);
+          }
+        }
       }
     }
 
     .walk-img {
       width: 46%;
       margin-left: 4%;
-      
+
       img {
         width: 100%;
         height: auto;
@@ -72,4 +94,4 @@
       }
     }
   }
-}// home
+} // home
