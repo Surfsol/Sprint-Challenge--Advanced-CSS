@@ -35,10 +35,14 @@ Edit this document to include your answers after each question. Make sure to lea
 What is the difference between an adaptive website and a fully responsive website?
 
 Responsive design fluidly adjusts any screen size. Where as adaptive sites adjust only at certain px widths. Responsive design is normally accomplished using percentages and rem, not just hard coded pixel lengths.
+
 Describe what it means to be mobile first vs desktop first.
+
 Mobile first means to design your site for mobile screen width first, then make media queries for tablets and desktop sizes. When making media queries you would a minimum width for the screen to make adjustments.
+
 What does font-size: 62.5% in the html tag do for us when using rem units?
 it will make 1 rem equal to 10px.  
+
 How would you describe preprocessing to someone new to CSS?
 Preprocessing is program that allows you organize your process of styling elements for your CSS file and makes it easier to read and follow other programmers work. When using a preprocessor you are able to oraganize the elements similar to that of an html file, in which child elements are nested into parent elements. The preprocssor will the update the css file.
 
@@ -46,6 +50,77 @@ What is your favorite concept in preprocessing? What is the concept that gives y
 Favorite concept is being able to keep media queries in the same section. Will be useful when working with large files.
 
 You are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. Skipping this section _will_ prevent you from passing this challenge.
+
+## My highlight takeaways
+
+Project Highlights
+
+Make site fully responsive:
+viewpoint - html
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+Make containers fully responsive:  use max-width, dont set (width: 1000px)
+max-width: 1000px; /*max width makes container fully responsive*/
+  width: 100%;
+  margin: 0 auto;
+
+Preprocessing:
+use less:
+less-watch-compiler less css index.html 
+
+  .img-top {
+    /*container is 800px*/
+    .spacing(); /*includes width of 95%, to make img reponsive*/
+    .flex();
+
+    @media @phone {
+      width: 95%;
+      flex-direction: column;
+    }
+
+    img {
+      height: 200px;
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 2%;
+
+      @media @phone {
+        width: 95%;
+      }
+    }
+  }
+
+Make mixins:
+.button(@color: white, @background:blue) {
+  color: @color;
+  font-size: 1.8rem;
+  background: @background;
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  text-align: center; /*put text in center*/
+  padding: 7px; /*vertical align*/
+  cursor: pointer;
+}
+
+Adjust sites for mobile devices:
+media queries:
+.top {
+    .flex();
+    flex-direction: column;
+    background: @border-real;
+    width: 100%;
+    height: 100px;
+    margin-top: 2%;
+
+    @media @phone {
+      width: 95%;
+    }
+
+Center Text in Button:
+  text-align: center; /*put button in center*/
+  padding: 7px; /*vertical align*/
+
 
 ## Project Set Up
 

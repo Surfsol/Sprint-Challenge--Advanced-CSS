@@ -1,10 +1,15 @@
 // Navigation code here
 .nav-top {
-  width: 1000px;
+  /*should be longer than body .container*/
+  max-width: 1000px; /*max width makes container fully responsive*/
+  width: 100%;
   margin: 0 auto;
 
   @media @phone {
-    width: 500px;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    .flex();
   }
 
   .top {
@@ -27,7 +32,7 @@
     nav a {
       color: @ebony-clay;
       text-decoration: none;
-      margin: 20px; /*space between a*/
+      margin: 20px; /*space between words in nav*/
       font-size: 1.5rem;
 
       @media @phone {
